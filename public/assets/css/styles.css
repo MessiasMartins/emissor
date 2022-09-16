@@ -1,0 +1,18 @@
+*{
+    font-family: Roboto;
+}
+
+h1{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+}
+
+.btn{
+    text-align: center;
+    position: center;
+    align-items: center;
+}
