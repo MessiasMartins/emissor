@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('prestadores');
-});
+use App\Http\Controllers\PrestadorController;
+use App\Http\Controllers\TomadorController;
+use App\Http\Controllers\NotaController;
+
+Route::get('/prestadores', [PrestadorController::class, 'prestador']);
+Route::get('/tomadores', [TomadorController::class, 'tomador']);
+Route::get('/notas', [NotaController::class, 'nota']);

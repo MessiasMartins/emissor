@@ -27,9 +27,7 @@
         <label>Email</label>
         <input type="email" class="form-control" required>
     </div>
+    <button type="button" class="btn btn-success">Enviar</button>
+    <button type="button" class="btn btn-danger">Cancelar</button>
 </div>
-
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-
 @endsection
