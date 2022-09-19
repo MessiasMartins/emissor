@@ -18,5 +18,7 @@ use App\Http\Controllers\TomadorController;
 use App\Http\Controllers\NotaController;
 
 Route::get('/prestadores', [PrestadorController::class, 'prestador']);
+Route::post('/prestadores', [PrestadorController::class, 'store']);
+
 Route::get('/tomadores', [TomadorController::class, 'tomador']);
 Route::get('/notas', [NotaController::class, 'nota']);
