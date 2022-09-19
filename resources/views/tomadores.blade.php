@@ -6,29 +6,29 @@
 
 <h1>Cadastro de Tomadores</h1>
 
-<div id="create-prestadores-container" class="col-md-6 offset-md-3">
+<div id="create-tomadores-container" class="col-md-6 offset-md-3">
     <div class="container">
-        <form action="/prestadores" method="POST"></form>
+        <form action="/tomadores" method="POST">
         @csrf
             <div class="form-group">
-                <label>Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Prestador" required>
+                <label for="title">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Tomador" required>
             </div>
             <div class="form-group">
-                <label>Endereço</label>
-                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço do Prestador" required>
+                <label for="title">Endereço</label>
+                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço do Tomador" required>
             </div>
             <div class="form-group">
-                <label>CNPJ</label>
-                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ do Prestador" required>
+                <label for="title">CNPJ</label>
+                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ do Tomadorr" required>
             </div>
             <div class="form-group">
-                <label>Telefone</label>
-                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone do Prestador" required>
+                <label for="title">Telefone</label>
+                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone do Tomador" required>
             </div>
             <div class="form-group">
-                <label>Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Email do Prestador" required>
+                <label for="title">Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email do Tomador" required>
             </div>
             <input type="submit" class="btn btn-success" value="Cadastrar">
             <input type="button" class="btn btn-danger" value="Cancelar">

@@ -21,4 +21,6 @@ Route::get('/prestadores', [PrestadorController::class, 'prestador']);
 Route::post('/prestadores', [PrestadorController::class, 'store']);
 
 Route::get('/tomadores', [TomadorController::class, 'tomador']);
+Route::post('/tomadores', [TomadorController::class, 'store']);
+
 Route::get('/notas', [NotaController::class, 'nota']);

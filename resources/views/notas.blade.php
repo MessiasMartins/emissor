@@ -8,7 +8,7 @@
 
 <div id="create-prestadores-container" class="col-md-6 offset-md-3">
     <div class="container">
-        <form action="/prestadores" method="POST"></form>
+        <form action="/notas" method="POST">
         @csrf
             <div class="form-group">
                 <label>Número da Nota</label>
@@ -23,8 +23,12 @@
                 <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Nome do Prestador" required>
             </div>
             <div class="form-group">
-                <label>valor</label>
+                <label>Valor</label>
                 <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Valor" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email do Tomador" required>
             </div>
             <div class="form-group">
                 <label>Email</label>
