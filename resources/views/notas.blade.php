@@ -6,28 +6,33 @@
 
 <h1>Cadastro de Notas</h1>
 
-<div class="container">
-    <div class="form-group">
-        <label>Número da Nota</label>
-        <input type="text" class="form-control" required>
+<div id="create-prestadores-container" class="col-md-6 offset-md-3">
+    <div class="container">
+        <form action="/prestadores" method="POST"></form>
+        @csrf
+            <div class="form-group">
+                <label>Número da Nota</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Número da Nota" required>
+            </div>
+            <div class="form-group">
+                <label>Nome do Tomador</label>
+                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Nome do Tomador" required>
+            </div>
+            <div class="form-group">
+                <label>Nome do Prestador</label>
+                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Nome do Prestador" required>
+            </div>
+            <div class="form-group">
+                <label>valor</label>
+                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Valor" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email do Prestador" required>
+            </div>
+            <input type="submit" class="btn btn-success" value="Cadastrar">
+            <input type="button" class="btn btn-danger" value="Cancelar">
+        </form>
     </div>
-    <div class="form-group">
-        <label>Nome do Tomador</label>
-        <input type="text" class="form-control" required>
-    </div>
-    <div class="form-group">
-        <label>Nome do Prestador</label>
-        <input type="text" class="form-control" required>
-    </div>
-    <div class="form-group">
-        <label>Telefone</label>
-        <input type="text" class="form-control" required>
-    </div>
-    <div class="form-group">
-        <label>Email</label>
-        <input type="email" class="form-control" required>
-    </div>
-    <button type="button" class="btn btn-success">Enviar</button>
-    <button type="button" class="btn btn-danger">Cancelar</button>
 </div>
 @endsection
