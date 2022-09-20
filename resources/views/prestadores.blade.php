@@ -35,4 +35,13 @@
         </form>
     </div>
 </div>
+@if ($errors->any())
+    <div class="text-center">
+        @foreach ($errors->all() as $error)
+            <li class="list-none">
+                {{$error}}
+            </li>
+        @endforeach
+    </div>
+@endif
 @endsection
