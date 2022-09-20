@@ -4,6 +4,11 @@
 
 h1{
     text-align: center;
+    padding: 20px;
+}
+
+label{
+    padding: 5px;
 }
 
 footer{
@@ -15,4 +20,9 @@ footer{
     text-align: center;
     position: center;
     align-items: center;
+}
+
+h2{
+    text-align: center;
+    padding: 25px;
 }
