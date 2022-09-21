@@ -19,6 +19,11 @@
                         <h5 class="card-phone">{{ $prestadores->telefone }}</h5>
                         <h5 class="card-email">{{ $prestadores->email }}</h5>
                     </div>
+                    <form action="/prestadores/{{$prestadores->id}}"method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger delete-btn">Excluir</button>
+                    </form>
                 </div>
             </div>
         @endforeach

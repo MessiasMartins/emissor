@@ -20,6 +20,7 @@ use App\Http\Controllers\NotaController;
 Route::get('/', [PrestadorController::class, 'index']);
 Route::get('/prestadores', [PrestadorController::class, 'create']);
 Route::post('/prestadores', [PrestadorController::class, 'store']);
+Route::delete('/prestadores/{id}', [PrestadorController::class, 'destroy']);
 
 Route::get('/tomadores/index', [TomadorController::class, 'index']);
 Route::get('/tomadores', [TomadorController::class, 'create']);

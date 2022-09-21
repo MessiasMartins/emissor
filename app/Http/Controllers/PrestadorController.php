@@ -56,5 +56,8 @@ class PrestadorController extends Controller
 
     public function destroy($id){
 
+        Prestador::findOrFail($id) ->delete();
+
+        return redirect('/')->with('msg', 'Prestador excluido com sucesso');
     }
 }
