@@ -18,12 +18,17 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="collapse navbar-collapse" id="navbar">
+            <nav class="navbar navbar-dark navbar-expand-sm bg-dark">
+                <div class="container">
                     <a href="/" class="navbar-brand">
-                        <img src="" alt="">
+                    <i class="fas fa-blog"></i> &nbsp;
+                    Emissor
                     </a>
-                    <ul class="navbar-nav">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="/" class="nav-link">Prestadores</a>
                         </li>
@@ -40,6 +45,7 @@
                             <a href="/notas" class="nav-link">Cadastrar Nota</a>
                         </li>
                     </ul>
+                </div>
                 </div>
             </nav>
         </header>

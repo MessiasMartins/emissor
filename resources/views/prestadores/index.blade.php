@@ -5,7 +5,7 @@
 @section('content')
 
 <div id="search-container" class="col-md-12 mb-5">
-    <h1 class="mt-5">Prestadores Cadastrados</h1>
+    <h1>Prestadores Cadastrados</h1>
 </div>
     <div id="cards-container" class="row">
         @foreach($prestadores as $prestadores)

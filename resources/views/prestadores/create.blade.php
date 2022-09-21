@@ -31,7 +31,6 @@
                 <input type="text" class="form-control" id="email" name="email" placeholder="Email do Prestador" required>
             </div>
             <input type="submit" class="btn btn-success" value="Cadastrar">
-            <input type="button" class="btn btn-danger" value="Cancelar">
         </form>
     </div>
 </div>
