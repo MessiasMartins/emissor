@@ -25,5 +25,6 @@ Route::delete('/prestadores/{id}', [PrestadorController::class, 'destroy']);
 Route::get('/tomadores/index', [TomadorController::class, 'index']);
 Route::get('/tomadores', [TomadorController::class, 'create']);
 Route::post('/tomadores', [TomadorController::class, 'store']);
+Route::delete('/tomadores/{id}', [TomadorController::class, 'destroy']);
 
 Route::get('/notas', [NotaController::class, 'nota']);
