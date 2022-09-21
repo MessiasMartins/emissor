@@ -17,10 +17,12 @@ use App\Http\Controllers\PrestadorController;
 use App\Http\Controllers\TomadorController;
 use App\Http\Controllers\NotaController;
 
-Route::get('/prestadores', [PrestadorController::class, 'prestador']);
+Route::get('/', [PrestadorController::class, 'index']);
+Route::get('/prestadores', [PrestadorController::class, 'create']);
 Route::post('/prestadores', [PrestadorController::class, 'store']);
 
-Route::get('/tomadores', [TomadorController::class, 'tomador']);
+Route::get('/tomadores/index', [TomadorController::class, 'index']);
+Route::get('/tomadores', [TomadorController::class, 'create']);
 Route::post('/tomadores', [TomadorController::class, 'store']);
 
 Route::get('/notas', [NotaController::class, 'nota']);

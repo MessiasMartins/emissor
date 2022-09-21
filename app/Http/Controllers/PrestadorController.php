@@ -8,11 +8,18 @@ use App\Models\Prestador;
 
 class PrestadorController extends Controller
 {
-    public function prestador(){
-        return view('prestadores');
+    public function index(){
+        $prestadores = Prestador::all();
+        return view('prestadores.index', ['prestadores' => $prestadores]);
+    }
+
+    public function create(){
+        return view('prestadores.create');
     }
 
     public function store(Request $request){
+
+        //Validação de campos apenas no controller
 
         $request->validate([
             'nome' => 'required|max:255|min:3',
@@ -33,5 +40,21 @@ class PrestadorController extends Controller
         $prestador->save();
 
         return redirect('/');
+    }
+
+    public function show($id){
+
+    }
+
+    public function edit($id){
+
+    }
+
+    public function update($id){
+
+    }
+
+    public function destroy($id){
+
     }
 }

@@ -25,13 +25,16 @@
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Início</a>
+                            <a href="/" class="nav-link">Prestadores</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/tomadores" class="nav-link">Cadastrar Tomador</a>
+                            <a href="/tomadores/index" class="nav-link">Tomadores</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/prestadores" class="nav-link">Cadastrar Prestador </a>
+                            <a href="/prestadores" class="nav-link">Cadastrar Prestador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/tomadores" class="nav-link">Cadastrar Tomador </a>
                         </li>
                         <li class="nav-item">
                             <a href="/notas" class="nav-link">Cadastrar Nota</a>

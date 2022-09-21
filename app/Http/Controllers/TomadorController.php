@@ -9,11 +9,19 @@ use App\Models\Tomador;
 
 class TomadorController extends Controller
 {
-    public function tomador(){
-        return view('tomadores');
+
+    public function index(){
+        $tomadores = Tomador::all();
+        return view('tomadores.index', ['tomadores' => $tomadores]);
+    }
+
+    public function create(){
+        return view('tomadores.create');
     }
 
     public function store(Request $request){
+
+        //Validação de campos apenas no controller
 
         $request->validate([
             'nome' => 'required|max:255|min:3',
@@ -35,4 +43,21 @@ class TomadorController extends Controller
 
         return redirect('/');
     }
+
+    public function show($id){
+
+    }
+
+    public function edit($id){
+
+    }
+
+    public function update($id){
+
+    }
+
+    public function destroy($id){
+
+    }
+
 }
