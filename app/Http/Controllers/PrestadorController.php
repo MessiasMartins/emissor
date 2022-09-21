@@ -58,6 +58,6 @@ class PrestadorController extends Controller
 
         Prestador::findOrFail($id) ->delete();
 
-        return redirect('/')->with('msg', 'Prestador excluido com sucesso');
+        return redirect('/');
     }
 }
