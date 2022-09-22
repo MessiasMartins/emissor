@@ -21,9 +21,9 @@ class TomadorController extends Controller
 
     public function store(Request $request){
 
-        //Validação de campos apenas no controller
+        //Validação de Campos e mensagens personalizadas
 
-        $request->validate(Tomador::rules());
+        $request->validate(Tomador::rules(), Tomador::messages());
 
         $tomador = new tomador;
 

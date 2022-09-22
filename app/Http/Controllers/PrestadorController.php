@@ -19,7 +19,7 @@ class PrestadorController extends Controller
 
     public function store(Request $request){
 
-        //Validação de campos apenas no controller
+        //Validação de Campos e mensagens personalizadas
 
         $request->validate(Prestador::rules(), Prestador::messages());
 
