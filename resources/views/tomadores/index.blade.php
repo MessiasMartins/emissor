@@ -23,8 +23,8 @@
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger delete-btn">Excluir</button>
+                        <a href="/tomadores/edit/{{ $tomadores->id }}" class="btn btn-info">Editar</a>
                     </form>
-                    <a href="/tomadores/edit/{{ $tomadores->id }}" class="btn btn-info">Editar</a>
                 </div>
             </div>
         @endforeach
