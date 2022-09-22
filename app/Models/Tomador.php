@@ -9,6 +9,8 @@ class Tomador extends Model
 {
     protected $table = 'tomador';
 
+    protected $guarded = [];
+
     public static function rules(){
         return[
             'nome' => 'required|max:255|min:3',

@@ -1,14 +1,14 @@
 @extends('layouts.main')
 
-@section('title', 'Editando:' . $prestador->nome)
+@section('title', 'Editando:' . $tomador->nome)
 
 @section('content')
 
-<h1>Editar Prestador</h1>
+<h1>Editar Tomador</h1>
 
 <div id="create-prestadores-container" class="col-md-6 offset-md-3">
     <div class="container">
-        <form action="/prestadores/update/{{$prestador->id}}" method="POST">
+        <form action="/tomadores/update/{{$tomador->id}}" method="POST">
         @csrf
         @method('PUT')
             <div class="form-group">

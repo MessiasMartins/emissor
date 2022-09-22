@@ -44,13 +44,20 @@ class TomadorController extends Controller
 
     public function edit($id){
 
+        $tomadores = Tomador::findOrFail($id);
+
+        return view('tomadores.edit', ['tomador' => $tomadores]);
     }
 
     public function update($id){
 
+        Tomador::findOrFail($request->id)->update($request->all());
+
+        return redirect()->route('tomador.index');
     }
 
     public function destroy($id){
+
         Tomador::findOrFail($id) ->delete();
 
         return redirect()->route('tomador.index');

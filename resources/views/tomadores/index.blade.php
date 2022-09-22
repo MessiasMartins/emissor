@@ -24,6 +24,7 @@
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger delete-btn">Excluir</button>
                     </form>
+                    <a href="/tomadores/edit/{{ $tomadores->id }}" class="btn btn-info">Editar</a>
                 </div>
             </div>
         @endforeach

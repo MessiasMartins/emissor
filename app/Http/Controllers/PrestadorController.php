@@ -42,9 +42,16 @@ class PrestadorController extends Controller
 
     public function edit($id){
 
+        $prestadores = Prestador::findOrFail($id);
+
+        return view('prestadores.edit', ['prestador' => $prestadores]);
     }
 
-    public function update($id){
+    public function update(Request $request){
+
+        Prestador::findOrFail($request->id)->update($request->all());
+
+        return redirect()->route('prestador.index');
 
     }
 

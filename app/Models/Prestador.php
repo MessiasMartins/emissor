@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Prestador extends Model
 {
+    //Buscar a tabela do banco no singular
     protected $table = 'prestador';
+
+    //Necessario para o update
+    protected $guarded = [];
 
     public static function rules(){
         return[
