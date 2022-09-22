@@ -35,8 +35,6 @@ class Prestador extends Model
             'telefone.required' => 'O campo Telefone é obrigatório!',
 
             'email.required' => 'O campo Email é obrigatório!',
-
-
         ];
     }
 

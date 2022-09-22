@@ -12,23 +12,23 @@
         @csrf
             <div class="form-group">
                 <label for="title">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Prestador">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Prestador" value="{{old('nome')}}">
             </div>
             <div class="form-group">
                 <label for="title">Endereço</label>
-                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço do Prestador">
+                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço do Prestador" value="{{old('endereco')}}">
             </div>
             <div class="form-group">
                 <label for="title">CNPJ</label>
-                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ do Prestador">
+                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ do Prestador" value="{{old('cnpj')}}">
             </div>
             <div class="form-group">
                 <label for="title">Telefone</label>
-                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone do Prestador">
+                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone do Prestador" value="{{old('telefone')}}">
             </div>
             <div class="form-group">
                 <label for="title">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Email do Prestador">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email do Prestador" value="{{old('email')}}">
             </div>
             <input type="submit" class="btn btn-success" value="Cadastrar">
         </form>
