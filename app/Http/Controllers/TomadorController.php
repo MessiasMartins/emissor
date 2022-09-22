@@ -35,7 +35,7 @@ class TomadorController extends Controller
 
         $tomador->save();
 
-        return redirect('tomadores/index');
+        return redirect()->route('tomador.index');
     }
 
     public function show($id){
@@ -53,7 +53,7 @@ class TomadorController extends Controller
     public function destroy($id){
         Tomador::findOrFail($id) ->delete();
 
-        return redirect('tomadores/index');
+        return redirect()->route('tomador.index');
     }
 
 }
