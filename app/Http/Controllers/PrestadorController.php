@@ -21,7 +21,7 @@ class PrestadorController extends Controller
 
         //Validação de campos apenas no controller
 
-        $request->validate(Prestador::rules());
+        $request->validate(Prestador::rules(), Prestador::messages());
 
         $prestador = new Prestador;
 
