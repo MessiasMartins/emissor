@@ -21,13 +21,7 @@ class PrestadorController extends Controller
 
         //Validação de campos apenas no controller
 
-        $request->validate([
-            'nome' => 'required|max:255|min:3',
-            'endereco' => 'required|max:255|min:3',
-            'cnpj' => 'required|min:14',
-            'telefone' => 'required',
-            'email' => 'required',
-        ]);
+        $request->validate(Prestador::rules());
 
         $prestador = new Prestador;
 
@@ -39,7 +33,7 @@ class PrestadorController extends Controller
 
         $prestador->save();
 
-        return redirect('/');
+        return redirect()->route('prestador.index');
     }
 
     public function show($id){
@@ -58,6 +52,6 @@ class PrestadorController extends Controller
 
         Prestador::findOrFail($id) ->delete();
 
-        return redirect('/');
+        return redirect()->route('prestador.index');
     }
 }

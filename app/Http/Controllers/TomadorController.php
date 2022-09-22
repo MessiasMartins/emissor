@@ -23,13 +23,7 @@ class TomadorController extends Controller
 
         //Validação de campos apenas no controller
 
-        $request->validate([
-            'nome' => 'required|max:255|min:3',
-            'endereco' => 'required|max:255|min:3',
-            'cnpj' => 'required|min:14',
-            'telefone' => 'required',
-            'email' => 'required',
-        ]);
+        $request->validate(Tomador::rules());
 
         $tomador = new tomador;
 
