@@ -31,4 +31,4 @@ Route::delete('/tomadores/{id}', [TomadorController::class, 'destroy'])->name('t
 Route::get('/tomadores/edit/{id}', [TomadorController::class, 'edit'])->name('tomador.edit');
 Route::put('/tomadores/update/{id}', [TomadorController::class, 'update'])->name('tomador.update');
 
-Route::get('/notas', [NotaController::class, 'nota']);
+Route::get('/notas', [NotaController::class, 'create'])->name('nota.create');
