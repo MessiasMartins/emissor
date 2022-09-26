@@ -32,3 +32,4 @@ Route::get('/tomadores/edit/{id}', [TomadorController::class, 'edit'])->name('to
 Route::put('/tomadores/update/{id}', [TomadorController::class, 'update'])->name('tomador.update');
 
 Route::get('/notas', [NotaController::class, 'create'])->name('nota.create');
+//Route::get('/notas', [NotaController::class, 'index'])->name('nota.index');
