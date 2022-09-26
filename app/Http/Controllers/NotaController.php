@@ -9,7 +9,8 @@ use App\Models\Nota;
 class NotaController extends Controller
 {
     public function index(){
-        return view('notas.index');
+        $notas = Nota::all();
+        return view('notas.index', ['notas' => $notas]);
     }
 
     public function create(){
