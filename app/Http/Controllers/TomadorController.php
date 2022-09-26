@@ -49,7 +49,7 @@ class TomadorController extends Controller
         return view('tomadores.edit', ['tomador' => $tomadores]);
     }
 
-    public function update($id){
+    public function update(Request $request){
 
         Tomador::findOrFail($request->id)->update($request->all());
 
