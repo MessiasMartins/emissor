@@ -10,7 +10,7 @@ class Prestador extends Model
     //Buscar a tabela do banco no singular
     protected $table = 'prestador';
 
-    //Necessario para o update
+    //Necessario para o update (erro mass)
     protected $guarded = [];
 
     public static function rules(){
