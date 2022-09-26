@@ -13,23 +13,23 @@
         @method('PUT')
             <div class="form-group">
                 <label for="title">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Prestador" value="{{old('nome')}}">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Tomador" value="{{old('nome', $tomador->nome)}}">
             </div>
             <div class="form-group">
                 <label for="title">Endereço</label>
-                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço do Prestador" value="{{old('endereco')}}">
+                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço do Tomador" value="{{old('endereco', $tomador->endereco)}}">
             </div>
             <div class="form-group">
                 <label for="title">CNPJ</label>
-                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ do Prestador" value="{{old('cnpj')}}">
+                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ do Tomador" value="{{old('cnpj', $tomador->cnpj)}}">
             </div>
             <div class="form-group">
                 <label for="title">Telefone</label>
-                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone do Prestador" value="{{old('telefone')}}">
+                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone do Tomador" value="{{old('telefone', $tomador->telefone)}}">
             </div>
             <div class="form-group">
                 <label for="title">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Email do Prestador" value="{{old('email')}}">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email do Tomador" value="{{old('email', $tomador->email)}}">
             </div>
             <input type="submit" class="btn btn-success" value="Cadastrar">
         </form>
