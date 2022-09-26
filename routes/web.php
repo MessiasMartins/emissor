@@ -33,3 +33,5 @@ Route::put('/tomadores/update/{id}', [TomadorController::class, 'update'])->name
 
 Route::get('/notas/index', [NotaController::class, 'index'])->name('nota.index');
 Route::get('/notas', [NotaController::class, 'create'])->name('nota.create');
+Route::post('/notas', [ NotaController::class, 'store'])->name('nota.store');
+
