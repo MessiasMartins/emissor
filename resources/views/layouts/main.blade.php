@@ -20,9 +20,9 @@
         <header>
             <nav class="navbar navbar-dark navbar-expand-sm bg-dark">
                 <div class="container">
-                    <a href="/" class="navbar-brand">
+                    <a href="/notas/index" class="navbar-brand">
                     <i class="fas fa-blog"></i> &nbsp;
-                    Emissor
+                    Notas
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
