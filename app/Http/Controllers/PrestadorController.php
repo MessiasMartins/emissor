@@ -49,6 +49,8 @@ class PrestadorController extends Controller
 
     public function update(Request $request){
 
+        $request->validate(Prestador::rules(), Prestador::messages());
+
         Prestador::findOrFail($request->id)->update($request->all());
 
         return redirect()->route('prestador.index');

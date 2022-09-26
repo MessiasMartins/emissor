@@ -51,6 +51,8 @@ class TomadorController extends Controller
 
     public function update(Request $request){
 
+        $request->validate(Tomador::rules(), Tomador::messages());
+
         Tomador::findOrFail($request->id)->update($request->all());
 
         return redirect()->route('tomador.index');
