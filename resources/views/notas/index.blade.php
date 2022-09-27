@@ -11,10 +11,12 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>ID</th>
+                    <th>Prestador</th>
+                    <th>Tomador</th>
+                    <th>Valor</th>
+                    <th>E-mail Prestador</th>
+                    <th>E-mail Tomador</th>
                 </tr>
             </thead>
             <tbody>
