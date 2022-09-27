@@ -20,7 +20,6 @@ class Nota extends Model
             'prestador' => 'required|min:14',
             'valor' => 'required|min:14',
             'email' => 'required',
-            'email' => 'required',
         ];
     }
 
@@ -50,11 +49,11 @@ class Nota extends Model
     }
 
     public function prestador(){
-        return $this->hasOne(Prestador::class);
+        return $this->hasOne(Prestador::class,'prestador_id');
     }
 
     public function tomador(){
-        return $this->hasOne(Tomador::class);
+        return $this->hasOne(Tomador::class,'tomador_id');
     }
 
     use HasFactory;

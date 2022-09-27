@@ -21,8 +21,8 @@
             </div>
             <div class="form-group">
                 <label>Nome do Tomador</label>
-                <input type="text" class="form-control @error('nomeTomador') is-invalid @enderror" id="nomeTomador" name="nomeTomador" placeholder="Nome do Tomador" value="{{old('nomeTomador')}}">
-                @error('nomeTomador')
+                <input type="text" class="form-control @error('tomador') is-invalid @enderror" id="tomador" name="tomador" placeholder="Nome do Tomador" value="{{old('tomador')}}">
+                @error('tomador')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
@@ -30,8 +30,8 @@
             </div>
             <div class="form-group">
                 <label>Nome do Prestador</label>
-                <input type="text" class="form-control @error('nomePrestador') is-invalid @enderror" id="nomePrestador" name="nomePrestador" placeholder="Nome do Prestador" value="{{old('nomePrestador')}}">
-                @error('nomePrestador')
+                <input type="text" class="form-control @error('prestador') is-invalid @enderror" id="prestador" name="prestador" placeholder="Nome do Prestador" value="{{old('prestador')}}">
+                @error('prestador')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{$message}}</strong>
                 </span>

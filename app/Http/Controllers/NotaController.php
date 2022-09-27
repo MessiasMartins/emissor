@@ -29,11 +29,11 @@ class NotaController extends Controller
         $nota->tomador = $request->tomador;
         $nota->prestador = $request->prestador;
         $nota->valor = $request->valor;
-        $nota->email = $request->email;
-        $nota->email = $request->email;
+        $nota->email_prestador = $request->email_prestador;
+        $nota->email_prestador = $request->email_prestador;
 
         $nota->save();
 
-        return redirect()->route('nota.index');
+        return redirect()->route('notas.index');
     }
 }

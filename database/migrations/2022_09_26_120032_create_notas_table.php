@@ -17,12 +17,13 @@ class CreateNotasTable extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('prestador_id')->constrained();
-            $table->foreignId('tomador_id')->constraied();
+            $table->foreignId('tomador_id')->constrained();
             $table->string('numero',14);
+            $table->string('valor');
             $table->string('tomador');
             $table->string('prestador');
-            $table->string('email');
-            $table->string('email');
+            $table->string('email_prestador');
+            $table->string('email_tomador');
         });
     }
 
