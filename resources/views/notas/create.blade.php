@@ -47,7 +47,7 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label>E-mail</label>
+                <label>E-mail do Prestador</label>
                 <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="E-mail do Tomador" value="{{old('email')}}">
                 @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -56,7 +56,7 @@
                 @enderror
             </div>
             <div class="form-group">
-                <label>E-mail</label>
+                <label>E-mail do Tomador</label>
                 <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="E-mail do Prestador" value="{{old('email')}}">
                 @error('email')
                 <span class="invalid-feedback" role="alert">

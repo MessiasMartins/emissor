@@ -17,8 +17,8 @@ class Nota extends Model
         return[
             'numero' => 'required|max:255|min:3',
             'tomador' => 'required|max:255|min:3',
-            'prestador' => 'required|min:14',
-            'valor' => 'required|min:14',
+            'prestador' => 'required|min:3',
+            'valor' => 'required|max:14',
             'email' => 'required',
         ];
     }
