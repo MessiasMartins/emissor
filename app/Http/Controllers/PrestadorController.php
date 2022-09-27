@@ -31,7 +31,7 @@ class PrestadorController extends Controller
         $prestador->email = $request->email;
         $prestador->save();
 
-        return redirect()->route('prestador.index');
+        return redirect()->route('prestador.index')->with('msg', 'Prestador cadastrado com sucesso!');
     }
 
     public function show($id)
@@ -53,7 +53,7 @@ class PrestadorController extends Controller
         $request->validate(Prestador::rules(), Prestador::messages());
         Prestador::findOrFail($request->id)->update($request->all());
 
-        return redirect()->route('prestador.index');
+        return redirect()->route('prestador.index')->with('msg', 'Prestador atualizado com sucesso!');
 
     }
 
@@ -62,6 +62,6 @@ class PrestadorController extends Controller
 
         Prestador::findOrFail($id) ->delete();
 
-        return redirect()->route('prestador.index');
+        return redirect()->route('prestador.index')->with('msg', 'Prestador excluido com sucesso!');
     }
 }

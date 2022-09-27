@@ -33,7 +33,7 @@ class TomadorController extends Controller
         $tomador->email = $request->email;
         $tomador->save();
 
-        return redirect()->route('tomador.index');
+        return redirect()->route('tomador.index')->with('msg', 'Tomador cadastrado com sucesso!');
     }
 
     public function show($id)
@@ -55,7 +55,7 @@ class TomadorController extends Controller
         $request->validate(Tomador::rules(), Tomador::messages());
         Tomador::findOrFail($request->id)->update($request->all());
 
-        return redirect()->route('tomador.index');
+        return redirect()->route('tomador.index')->with('msg', 'Tomador atualizado com sucesso!');
     }
 
     public function destroy($id)
@@ -63,7 +63,7 @@ class TomadorController extends Controller
 
         Tomador::findOrFail($id) ->delete();
 
-        return redirect()->route('tomador.index');
+        return redirect()->route('tomador.index')->with('msg', 'Tomador excluido com sucesso!');
     }
 
 }

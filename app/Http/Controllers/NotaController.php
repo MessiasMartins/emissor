@@ -32,6 +32,6 @@ class NotaController extends Controller
         $nota->email_prestador = $request->email_prestador;
         $nota->save();
 
-        return redirect()->route('notas.index');
+        return redirect()->route('notas.index')->with('msg', 'Nota cadastrada com sucesso!');
     }
 }
