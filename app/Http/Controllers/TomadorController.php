@@ -3,62 +3,63 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Models\Tomador;
 
 
 class TomadorController extends Controller
 {
 
-    public function index(){
+    public function index()
+    {
         $tomadores = Tomador::all();
+
         return view('tomadores.index', ['tomadores' => $tomadores]);
     }
 
-    public function create(){
+    public function create()
+    {
         return view('tomadores.create');
     }
 
-    public function store(Request $request){
-
+    public function store(Request $request)
+    {
         //Validação de Campos e mensagens personalizadas
-
         $request->validate(Tomador::rules(), Tomador::messages());
-
         $tomador = new tomador;
-
         $tomador->nome = $request->nome;
         $tomador->endereco = $request->endereco;
         $tomador->cnpj = $request->cnpj;
         $tomador->telefone = $request->telefone;
         $tomador->email = $request->email;
-
         $tomador->save();
 
         return redirect()->route('tomador.index');
     }
 
-    public function show($id){
+    public function show($id)
+    {
 
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
 
         $tomadores = Tomador::findOrFail($id);
 
         return view('tomadores.edit', ['tomador' => $tomadores]);
     }
 
-    public function update(Request $request){
+    public function update(Request $request)
+    {
 
         $request->validate(Tomador::rules(), Tomador::messages());
-
         Tomador::findOrFail($request->id)->update($request->all());
 
         return redirect()->route('tomador.index');
     }
 
-    public function destroy($id){
+    public function destroy($id)
+    {
 
         Tomador::findOrFail($id) ->delete();
 
