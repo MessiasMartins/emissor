@@ -20,10 +20,12 @@
             <tbody>
                 @foreach($notas as $nota)
                 <tr>
-                    <td>{{$nota->prestador->nome}}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$nota->id}}</td>
+                    <td>{{$nota->prestador}}</td>
+                    <td>{{$nota->tomador}}</td>
+                    <td>{{$nota->valor}}</td>
+                    <td>{{$nota->email_prestador}}</td>
+                    <td>{{$nota->email_tomador}}</td>
                 </tr>
                 @endforeach
             </tbody>
