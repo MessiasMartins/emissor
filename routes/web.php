@@ -21,6 +21,7 @@ Route::get('/', [PrestadorController::class, 'index'])->name('prestador.index');
 Route::get('/prestadores', [PrestadorController::class, 'create'])->name('prestador.create');
 Route::post('/prestadores', [PrestadorController::class, 'store'])->name('prestador.store');
 Route::delete('/prestadores/{id}', [PrestadorController::class, 'destroy'])->name('prestador.destroy');
+//Route::get('/prestadores/{id}/edit', [PrestadorController::class, 'edit'])->name('prestador.edit');
 Route::get('/prestadores/edit/{id}', [PrestadorController::class, 'edit'])->name('prestador.edit');
 Route::put('/prestadores/update/{id}', [PrestadorController::class, 'update'])->name('prestador.update');
 
