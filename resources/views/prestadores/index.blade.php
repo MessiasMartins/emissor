@@ -23,7 +23,7 @@
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger delete-btn">Excluir</button>
-                        <a href="prestadores/edit/{{ $prestadores->id }}" class="btn btn-info">Editar</a>
+                        <a href="{{route('prestador.edit', [$prestadores])}}" class="btn btn-info">Editar</a>
                     </form>
                 </div>
             </div>
