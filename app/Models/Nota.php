@@ -15,11 +15,10 @@ class Nota extends Model
 
     public static function rules(){
         return[
-            'numero' => 'required|max:255|min:3',
-            'tomador' => 'required|max:255|min:3',
-            'prestador' => 'required|min:3',
+            'numero' => 'required|int',
+            'tomador_id' => 'required|int',
+            'prestador_' => 'int',
             'valor' => 'required|max:14',
-            'email' => 'required',
         ];
     }
 
@@ -30,30 +29,22 @@ class Nota extends Model
             'numero.min'=> 'O campo Número deve ter no minimo 3 caracteres!',
 
             'tomador.required'=> 'O Tomador é obrigatório!',
-            'tomador.max'=> 'O campo Tomador deve ter até 255 caracteres!',
-            'tomador.min'=> 'O campo Tomador deve ter no minimo 3 caracteres!',
 
             'prestador.required'=> 'O Prestador é obrigatório!',
-            'prestador.max'=> 'O campo Prestador deve ter até 255 caracteres!',
-            'prestador.min'=> 'O campo Prestador deve ter no minimo 3 caracteres!',
-
 
             'valor.required' => 'O campo Valor é obrigatório!',
-            'valor.min' => 'O campo Valor deve ter até 14 caracteres!',
+            'valor.max' => 'O campo Valor deve ter até 14 caracteres!',
 
-            'telefone.required' => 'O campo Telefone é obrigatório!',
-
-            'email.required' => 'O campo Email é obrigatório!',
         ];
 
     }
 
     public function prestador(){
-        return $this->hasOne(Prestador::class,'prestador_id');
+        return $this->hasOne(Prestador::class,'id', 'prestador_id');
     }
 
     public function tomador(){
-        return $this->hasOne(Tomador::class,'tomador_id');
+        return $this->hasOne(Tomador::class,'id', 'tomador_id');
     }
 
     use HasFactory;

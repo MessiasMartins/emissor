@@ -16,14 +16,10 @@ class CreateNotasTable extends Migration
         Schema::create('notas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('prestador_id')->constrained();
-            $table->foreignId('tomador_id')->constrained();
+            $table->foreignId('prestador_id')->references('id')->on('prestador');
+            $table->foreignId('tomador_id')->references('id')->on('tomador');
             $table->string('numero',14);
             $table->string('valor');
-            $table->string('tomador');
-            $table->string('prestador');
-            $table->string('email_prestador');
-            $table->string('email_tomador');
         });
     }
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Nota;
+use App\Models\Tomador;
+use App\Models\Prestador;
 
 class NotaController extends Controller
 {
@@ -16,22 +18,36 @@ class NotaController extends Controller
 
     public function create()
     {
-        return view('notas.create');
+        $tomadores = Tomador::all();
+        $prestadores = Prestador::all();
+
+        return view('notas.create', [
+            'tomadores' => $tomadores,
+            'prestadores' => $prestadores
+
+        ]);
     }
 
     public function store(Request $request)
     {
         //Validação de Campos e mensagens personalizadas
         $request->validate(Nota::rules(), Nota::messages());
+
+        //Caso dê certo salva no banco, caso contrário é feito o rollback nas tabelas
+        //try{
+            //DB::beginTransaction();
+
         $nota = new Nota;
         $nota->numero = $request->numero;
-        $nota->tomador = $request->tomador;
-        $nota->prestador = $request->prestador;
+        $nota->tomador_id = $request->tomador_id;
+        $nota->prestador_id = $request->prestador_id;
         $nota->valor = $request->valor;
-        $nota->email_prestador = $request->email_prestador;
-        $nota->email_prestador = $request->email_prestador;
         $nota->save();
 
-        return redirect()->route('notas.index')->with('msg', 'Nota cadastrada com sucesso!');
+        //DB::commit();
+        return redirect()->route('nota.index')->with('msg', 'Nota cadastrada com sucesso!');
+        //} catch(\Exception $ex){
+            //DB::rollback();
+        //}
     }
 }

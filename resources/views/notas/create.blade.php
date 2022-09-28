@@ -21,44 +21,36 @@
             </div>
             <div class="form-group">
                 <label>Nome do Tomador</label>
-                <input type="text" class="form-control @error('tomador') is-invalid @enderror" id="tomador" name="tomador" placeholder="Nome do Tomador" value="{{old('tomador')}}">
+                <select name="tomador_id" id="tomador_id" class="form-control">
+                    @foreach($tomadores as $tomador)
+                    <option value="{{$tomador->id}}">{{$tomador->nome}}</option>
+                    @endforeach
+                </select>
+                <!--<input type="text" class="form-control @error('tomador') is-invalid @enderror" id="tomador" name="tomador" placeholder="Nome do Tomador" value="{{old('tomador')}}">
                 @error('tomador')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
-                @enderror
+                @enderror-->
             </div>
             <div class="form-group">
                 <label>Nome do Prestador</label>
-                <input type="text" class="form-control @error('prestador') is-invalid @enderror" id="prestador" name="prestador" placeholder="Nome do Prestador" value="{{old('prestador')}}">
+                <select name="prestador_id" id="prestador_id" class="form-control">
+                    @foreach($prestadores as $prestador)
+                    <option value="{{$prestador->id}}">{{$prestador->nome}}</option>
+                    @endforeach
+                </select>
+                <!--<input type="text" class="form-control @error('prestador') is-invalid @enderror" id="prestador" name="prestador" placeholder="Nome do Prestador" value="{{old('prestador')}}">
                 @error('prestador')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
-                @enderror
+                @enderror-->
             </div>
             <div class="form-group">
                 <label>Valor</label>
                 <input type="text" class="form-control @error('valor') is-invalid @enderror" id="valor" name="valor" placeholder="Valor" value="{{old('valor')}}">
                 @error('valor')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{$message}}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label>E-mail do Prestador</label>
-                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="E-mail do Tomador" value="{{old('email')}}">
-                @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{$message}}</strong>
-                </span>
-                @enderror
-            </div>
-            <div class="form-group">
-                <label>E-mail do Tomador</label>
-                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="E-mail do Prestador" value="{{old('email')}}">
-                @error('email')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
