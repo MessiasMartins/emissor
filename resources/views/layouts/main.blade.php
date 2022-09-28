@@ -18,36 +18,33 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-dark navbar-expand-sm bg-dark">
-                <div class="container">
-                    <a href="/notas/index" class="navbar-brand">
-                    <i class="fas fa-blog"></i> &nbsp;
-                    Notas
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Prestadores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/tomadores/index" class="nav-link">Tomadores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/prestadores" class="nav-link">Cadastrar Prestador</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/tomadores" class="nav-link">Cadastrar Tomador </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/notas" class="nav-link">Cadastrar Nota</a>
-                        </li>
-                    </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/notas/index">Notas <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/">Prestadores</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/tomadores/index">Tomadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/prestadores">Cadastrar Prestador</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/tomadores">Cadastrar Tomador</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/notas">Cadastrar Nota</a>
+                      </li>
+                 </ul>
                 </div>
-                </div>
-            </nav>
+              </nav>
         </header>
         <main>
             <div class="container-fluid">
