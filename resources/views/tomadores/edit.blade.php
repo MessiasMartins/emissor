@@ -6,7 +6,7 @@
 
 <h1>Editar Tomador</h1>
 
-<div id="create-prestadores-container" class="col-md-6 offset-md-3">
+<div id="create-tomadores-container" class="col-md-6 offset-md-3">
     <div class="container">
         <form action="/tomadores/update/{{$tomador->id}}" method="POST">
         @csrf

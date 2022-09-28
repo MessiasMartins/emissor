@@ -6,8 +6,8 @@
 
 <h1>Notas</h1>
 
-<div id="create-prestadores-container" class="col-md-6 offset-md-3">
-    <div class="container">
+<div id="create-notas-container" class="">
+    <div class="">
         <table class="table">
             <thead>
                 <tr>
