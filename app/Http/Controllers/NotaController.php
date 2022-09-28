@@ -50,4 +50,12 @@ class NotaController extends Controller
             //DB::rollback();
         //}
     }
+
+    public function destroy($id)
+    {
+
+        Nota::findOrFail($id) ->delete();
+
+        return redirect()->route('nota.index')->with('msg', 'Nota excluida com sucesso!');
+    }
 }

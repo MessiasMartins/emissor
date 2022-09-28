@@ -28,6 +28,13 @@
                     <td>{{$nota->valor}}</td>
                     <td>{{$nota->prestador->email}}</td>
                     <td>{{$nota->tomador->email}}</td>
+                    <td>
+                    <form action="/notas/{{$nota->id}}"method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger delete-btn">Excluir</button><a href="notas/edit/{{ $nota->id }}" class="btn btn-info">Editar</a>
+                    </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
