@@ -51,6 +51,24 @@ class NotaController extends Controller
         //}
     }
 
+    public function edit($id)
+    {
+
+        $notas = Nota::findOrFail($id);
+
+        return view('notas.edit', ['nota' => $notas]);
+    }
+
+    public function update(Request $request)
+    {
+
+        $request->validate(Nota::rules(), Nota::messages());
+        Nota::findOrFail($request->id)->update($request->all());
+
+        return redirect()->route('nota.index')->with('msg', 'Nota atualizada com sucesso!');
+
+    }
+
     public function destroy($id)
     {
 

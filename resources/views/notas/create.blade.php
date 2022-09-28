@@ -26,12 +26,12 @@
                     <option value="{{$tomador->id}}">{{$tomador->nome}}</option>
                     @endforeach
                 </select>
-                <!--<input type="text" class="form-control @error('tomador') is-invalid @enderror" id="tomador" name="tomador" placeholder="Nome do Tomador" value="{{old('tomador')}}">
+                {{--<input type="text" class="form-control @error('tomador') is-invalid @enderror" id="tomador" name="tomador" placeholder="Nome do Tomador" value="{{old('tomador')}}">
                 @error('tomador')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
-                @enderror-->
+                @enderror--}}
             </div>
             <div class="form-group">
                 <label>Nome do Prestador</label>
@@ -40,12 +40,12 @@
                     <option value="{{$prestador->id}}">{{$prestador->nome}}</option>
                     @endforeach
                 </select>
-                <!--<input type="text" class="form-control @error('prestador') is-invalid @enderror" id="prestador" name="prestador" placeholder="Nome do Prestador" value="{{old('prestador')}}">
+                {{--<input type="text" class="form-control @error('prestador') is-invalid @enderror" id="prestador" name="prestador" placeholder="Nome do Prestador" value="{{old('prestador')}}">
                 @error('prestador')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{$message}}</strong>
                 </span>
-                @enderror-->
+                @enderror--}}
             </div>
             <div class="form-group">
                 <label>Valor</label>

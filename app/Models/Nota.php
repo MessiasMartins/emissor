@@ -16,8 +16,8 @@ class Nota extends Model
     public static function rules(){
         return[
             'numero' => 'required|int',
-            'tomador_id' => 'required|int',
-            'prestador_' => 'int',
+            'tomador_id' => 'int',
+            'prestador_id' => 'int',
             'valor' => 'required|max:14',
         ];
     }
@@ -28,9 +28,9 @@ class Nota extends Model
             'numero.max'=> 'O campo Número deve ter até 255 caracteres!',
             'numero.min'=> 'O campo Número deve ter no minimo 3 caracteres!',
 
-            'tomador.required'=> 'O Tomador é obrigatório!',
+            'tomador_id.required'=> 'O Tomador é obrigatório!',
 
-            'prestador.required'=> 'O Prestador é obrigatório!',
+            'prestador_id.required'=> 'O Prestador é obrigatório!',
 
             'valor.required' => 'O campo Valor é obrigatório!',
             'valor.max' => 'O campo Valor deve ter até 14 caracteres!',

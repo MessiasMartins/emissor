@@ -64,4 +64,5 @@ class PrestadorController extends Controller
 
         return redirect()->route('prestador.index')->with('msg', 'Prestador excluido com sucesso!');
     }
+
 }
