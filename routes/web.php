@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PrestadorController;
+use App\Http\Controllers\TomadorController;
+use App\Http\Controllers\NotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-use App\Http\Controllers\PrestadorController;
-use App\Http\Controllers\TomadorController;
-use App\Http\Controllers\NotaController;
 
 Route::get('/', [PrestadorController::class, 'index'])->name('prestador.index');
 Route::get('/prestadores', [PrestadorController::class, 'create'])->name('prestador.create');
