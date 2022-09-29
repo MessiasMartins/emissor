@@ -12,6 +12,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Número</th>
                     <th>Prestador</th>
                     <th>Tomador</th>
                     <th>Valor</th>
@@ -23,6 +24,7 @@
                 @foreach($notas as $nota)
                 <tr>
                     <td>{{$nota->id}}</td>
+                    <td>{{$nota->numero}}</td>
                     <td>{{$nota->prestador->nome}}</td>
                     <td>{{$nota->tomador->nome}}</td>
                     <td>{{$nota->valor}}</td>
