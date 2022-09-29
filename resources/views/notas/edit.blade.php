@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Cadastro de Notas')
+@section('title', 'Edição de Notas')
 
 @section('content')
 

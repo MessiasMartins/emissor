@@ -37,7 +37,7 @@ Route::get('/notas/index', [NotaController::class, 'index'])->name('nota.index')
 Route::get('/notas', [NotaController::class, 'create'])->name('nota.create');
 Route::post('/notas', [ NotaController::class, 'store'])->name('nota.store');
 Route::delete('/notas/{id}', [ NotaController::class, 'destroy'])->name('nota.destroy');
-//Route::get('/notas/{id}/edit', [NotaController::class, 'edit'])->name('nota.edit');
-Route::get('/notas/edit/{id}', [NotaController::class, 'edit'])->name('nota.edit');
+Route::get('/notas/{id}/edit', [NotaController::class, 'edit'])->name('nota.edit');
+//Route::get('/notas/edit/{id}', [NotaController::class, 'edit'])->name('nota.edit');
 Route::put('/notas/update/{id}', [NotaController::class, 'update'])->name('nota.update');
 

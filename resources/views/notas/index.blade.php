@@ -33,7 +33,7 @@
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger delete-btn">Excluir</button>
-                        <a href="/notas/edit/{{ $nota->id }}" class="btn btn-info">Editar</a>
+                        <a href="{{route('nota.edit', [$nota])}}" class="btn btn-info">Editar</a>
                     </form>
                     </td>
                 </tr>
