@@ -61,19 +61,25 @@ class NotaController extends Controller
 
     public function update(Request $request)
     {
-
         $request->validate(Nota::rules(), Nota::messages());
         Nota::findOrFail($request->id)->update($request->all());
 
         return redirect()->route('nota.index')->with('msg', 'Nota atualizada com sucesso!');
-
     }
 
     public function destroy($id)
     {
-
         Nota::findOrFail($id) ->delete();
 
         return redirect()->route('nota.index')->with('msg', 'Nota excluida com sucesso!');
+    }
+
+    public function search(Request $request)
+    {
+        $notas = Nota::where('numero', '=', "$request->search")
+                        ->orWhere('numero', 'LIKE', "%($request->search)%")
+                        ->get();
+
+        return view('notas.index', compact('notas'));
     }
 }

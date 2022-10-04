@@ -6,6 +6,16 @@
 
 <h1>Notas</h1>
 
+<form action="{{route('nota.search')}}" method="post">
+    @csrf
+    <div class="input-group mb-4" >
+        <input type="text" class="form-control" name="search" placeholder="Pesquisar por Número:" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+        </div>
+      </div>
+</form>
+
 <div id="create-notas-container" class="">
     <div class="">
         <table class="table">
