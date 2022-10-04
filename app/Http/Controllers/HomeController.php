@@ -28,7 +28,7 @@ class HomeController extends Controller
         if(Auth::check() === true){
             return redirect()->route('nota.index');
         }else{
-        return redirect()->route('login');
+            return redirect()->route('login');
         //return view('home');
         }
     }
