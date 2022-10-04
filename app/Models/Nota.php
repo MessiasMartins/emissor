@@ -39,6 +39,8 @@ class Nota extends Model
 
     }
 
+    //Relacionamentos
+
     public function prestador(){
         return $this->hasOne(Prestador::class,'id', 'prestador_id');
     }

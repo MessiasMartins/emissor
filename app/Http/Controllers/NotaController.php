@@ -18,6 +18,7 @@ class NotaController extends Controller
 
     public function create()
     {
+        //Relacionamento | Campo do form
         $tomadores = Tomador::all();
         $prestadores = Prestador::all();
 
@@ -74,6 +75,7 @@ class NotaController extends Controller
         return redirect()->route('nota.index')->with('msg', 'Nota excluida com sucesso!');
     }
 
+    //Filtro de busca por número
     public function search(Request $request)
     {
         $notas = Nota::where('numero', '=', "$request->search")
